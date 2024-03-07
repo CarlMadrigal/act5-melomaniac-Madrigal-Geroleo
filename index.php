@@ -3,126 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dabitify</title>
-    <link rel="icon" href="Image/logo.png">
+    <link rel="icon" type="image/jpg" href="Image/logo.jpg">
+    <title>Dabify</title>
     <style>
-
         body {
-            font-family: Arial;
-            background-color: #f0f0f0;
+            font-family: 'verdana', 'Arial';
+            background-color: hsl(0, 0%, 100%);
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
         }
-        h1 {
-            text-align: center;
-            margin-top: 20px;
+
+        .songlist {
+            list-style: none;
+            align-items: baseline;
+            display: flex;
+            flex-direction: column;
+            margin: 25px;
         }
-        hr {
-            margin: 20px auto;
-            width: 80%;
-            border: 3px solid silver;
-        }
-        .link {
-            display: block;
+
+        .songitem {
             text-decoration: none;
-            color: black;
-            padding: 10px;
+            font-family: 'Lucida Sans Regular';
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            padding: 20px;
+            width: 600px;
+            box-shadow: 0 0px 30px rgba(0, 0, 0, 0.06);
         }
-        .link:hover {
-            background-color: aliceblue;
+
+        .songitem:hover {
+            transform: scale(1.03);
         }
-        .link img {
-            height: 40px;
-            width: 40px;
-            margin-right: 10px;
-            float: left;
+
+        #photo {
+            height: 120px;
+            width: 120px;
+            padding: 0px;
+            border-radius: 15px;
+            margin-right: 20px;
         }
-        .details {
-            margin-top: 5px;
+
+        .songinfo {
+            display: flex;
+            flex-direction: column;
+            padding-right: 0px;
+            padding-left: 10px;
         }
-        .title {
+
+        .songtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: bolder;
+            color: #000000;
             margin: 0;
-            font-size: 1.2em;
+            padding: 0;
         }
-        .artist {
+
+        .songartist {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #818181;
+            font-size: 23px;
             margin: 0;
-            font-size: 0.9em;
-            color: darkslategrey;
+            padding: 0;
+        }
+        
+        .websitename {
+            margin-bottom: 30px; 
+        }
+
+        .websitename h1 {
+            font-size: 6em;
+            color: #2e2e2e;
         }
     </style>
 </head>
 <body>
-    <h1>DABITIFY</h1>
-    <hr>
-
-    <a class="link" href="song1.php">
-        <img src="Image/song1cover.jpg" alt="Song 1 Cover">
-        <div class="details">
-            <h3 class="title">Pluto Project</h3>
-            <p class="artist">Song by Rex Orange County</p>
+    <header>
+        <div class="websitename">
+            <h1>Dabify</h1>
         </div>
-    </a>
+    </header>
+    <div class="songlist"> <!--Song 1-->
+        <a class="songitem" href="song1.php">
+            <img id="photo" src="Image/PlutoProjectCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Pluto Projector
+                </p>
+                <p class="songartist">
+                    Rex Orange Country
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song2.php">
-        <img src="Image/song2cover.jpg" alt="Song 2 Cover">
-        <div class="details">
-            <h3 class="title">Double Take</h3>
-            <p class="artist">Song by Dhruv</p>
-        </div>
-    </a>
+        <a class="songitem" href="song2.php">
+            <img id="photo" src="Image/DoubleTakeCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Double Take
+                </p>
+                <p class="songartist">
+                    Dhruv
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song3.php">
-        <img src="Image/song3cover.jpg" alt="Song 3 Cover">
-        <div class="details">
-            <h3 class="title">Locked Out of Heaven</h3>
-            <p class="artist">Song by Bruno Mars</p>
-        </div>
-    </a>
+        <a class="songitem" href="song3.php">
+            <img id="photo" src="Image/LockedOutofHeavenCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Locked out of Heaven
+                </p>
+                <p class="songartist">
+                    Bruno Mars
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song4.php">
-        <img src="Image/song4cover.jpg" alt="Song 4 Cover">
-        <div class="details">
-            <h3 class="title">Starboy</h3>
-            <p class="artist">Song by The Weekend, Draft Punk</p>
-        </div>
-    </a>
+        <a class="songitem" href="song4.php">
+            <img id="photo" src="Image/StarboyCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Starboy
+                </p>
+                <p class="songartist">
+                    The Weeknd, Draft Punk
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song5.php">
-        <img src="Image/song5cover.jpg" alt="Song 5 Cover">
-        <div class="details">
-            <h3 class="title">Sugar</h3>
-            <p class="artist">Song by Brockhampton</p>
-        </div>
-    </a>
+        <a class="songitem" href="song5.php">
+            <img id="photo" src="Image/SugarCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Sugar
+                </p>
+                <p class="songartist">
+                    Brockhampton
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song6.php">
-        <img src="Image/song6cover.jpg" alt="Song 6 Cover">
-        <div class="details">
-            <h3 class="title">Heaven Knows</h3>
-            <p class="artist">Song by Lemons & Orange</p>
-        </div>
-    </a>
+        <a class="songitem" href="song6.php">
+            <img id="photo" src="Image/HeavenKnowsCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Heaven Knows
+                </p>
+                <p class="songartist">
+                    Orange & Lemons
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song7.php">
-        <img src="Image/song7cover.jpg" alt="Song 7 Cover">
-        <div class="details">
-            <h3 class="title">Sinta</h3>
-            <p class="artist">Song by The Clubs</p>
-        </div>
-    </a>
+        <a class="songitem" href="song7.php">
+            <img id="photo" src="Image/SintaCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Sinta
+                </p>
+                <p class="songartist">
+                    The Clubs
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song8.php">
-        <img src="Image/song8cover.jpg" alt="Song 8 Cover">
-        <div class="details">
-            <h3 class="title">Leoonora</h3>
-            <p class="artist">Song by Sugarcane</p>
-        </div>
-    </a>
+        <a class="songitem" href="song8.php">
+            <img id="photo" src="Image/LeonoraCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Leonora
+                </p>
+                <p class="songartist">
+                    Sugarcane
+                </p>
+            </div>
+        </a>
 
-    <a class="link" href="song9.php">
-        <img src="Image/song9cover.jpg" alt="Song 9 Cover">
-        <div class="details">
-            <h3 class="title">Happiness</h3>
-            <p class="artist">Song by Rex Orange Country</p>
-        </div>
-    </a>
+        <a class="songitem" href="song9.php">
+            <img id="photo" src="Image/HappinessCover.jpg">
+            <div class="songinfo">
+                <p class="songtitle">
+                    Happiness
+                </p>
+                <p class="songartist">
+                    Rex Orange Country
+                </p>
+            </div>
+        </a>
+    </div>
 </body>
 </html>
